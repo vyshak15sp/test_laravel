@@ -1,7 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\CustomRegisterController;
+
 use App\Http\Controllers\ProductController;
+use Illuminate\Auth\Events\Login;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +25,13 @@ Route::get('/', function () {
 
 
 Route::get('/products', [ProductController::class, 'index']);
+
+
+
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
+
+
+
+Route::get('/register', [CustomRegisterController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register', [CustomRegisterController::class, 'create']);

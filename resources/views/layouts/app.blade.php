@@ -12,9 +12,31 @@
 
 <body>
     <div id="app">
-        <nav class="bg-white shadow-sm">
+        {{-- <nav class="bg-white shadow-sm">
             <div class="container mx-auto">
-                <div class="flex justify-between items-center py-4">
+                <div class="flex justify-between items-center py-4"> --}}
+
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <a class="navbar-brand" href="#">Products</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+
                     {{-- <div>
                         <a href="{{ url('/') }}" class="text-lg font-semibold text-gray-800">{{ config('app.name',
                             'Laravel') }}</a>
@@ -27,9 +49,9 @@
                         <a href="{{ route('register') }}" class="text-sm text-gray-700">Register</a>
                         @endauth
                     </div> --}}
-                </div>
+                {{-- </div>
             </div>
-        </nav>
+        </nav> --}}
 
         <main class="py-4">
             @yield('content')
@@ -42,4 +64,5 @@
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
     </script>
 </body>
+
 </html>
